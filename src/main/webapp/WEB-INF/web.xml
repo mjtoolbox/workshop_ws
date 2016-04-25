@@ -6,13 +6,18 @@
 
     <display-name>WebService Workshop</display-name>
 
+    <!-- Listener is needed in Tomcat -->
+    <listener>
+        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+    </listener>
+
     <servlet>
-        <servlet-name>{your webservice as a servlet name}</servlet-name>
+        <servlet-name>VariousService</servlet-name>
         <servlet-class>com.workshop.webservice.VariousServiceImpl</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>{must be same as above servlet-name}</servlet-name>
-        <url-pattern>/{same as url-pattern in sun-jaxws.xml}/*</url-pattern>
+        <servlet-name>VariousService</servlet-name>
+        <url-pattern>/VariousService/*</url-pattern>
     </servlet-mapping>
 
 </web-app>

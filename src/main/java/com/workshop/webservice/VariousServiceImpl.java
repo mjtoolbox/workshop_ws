@@ -1,4 +1,4 @@
-package main.java.com.workshop.webservice;
+package com.workshop.webservice;
 
 
 import javax.jws.WebMethod;
@@ -8,7 +8,7 @@ import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 
 
-@WebService(name = "VariousServiceImpl",
+@WebService(name = "VariousService",
         serviceName = "VariousServiceImpl",
         portName = "VariousServicePort",
         targetNamespace = "http://www.mjtoolbox.com/workshop"
