@@ -1,4 +1,4 @@
-package main.java.com.workshop.webservice;
+package com.workshop.webservice;
 
 /**
  * Create your own web service
