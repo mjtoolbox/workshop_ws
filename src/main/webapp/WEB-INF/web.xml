@@ -4,7 +4,15 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
 
-    <display-name></display-name>
+    <display-name>WebService Workshop</display-name>
 
+    <servlet>
+        <servlet-name>{your webservice as a servlet name}</servlet-name>
+        <servlet-class>com.workshop.webservice.VariousServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>{must be same as above servlet-name}</servlet-name>
+        <url-pattern>/{same as url-pattern in sun-jaxws.xml}/*</url-pattern>
+    </servlet-mapping>
 
 </web-app>
