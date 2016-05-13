@@ -23,9 +23,9 @@ import javax.jws.soap.SOAPBinding;
 public class VariousServiceImpl {
 
 
-    @WebMethod(operationName = "testWebService")
-    @WebResult(name = "testWebServiceResult")
-    public String testWebService(@WebParam(name = "name")String param){
+    @WebMethod(operationName = "displayName")
+    @WebResult(name = "displayNameResult")
+    public String displayName(@WebParam(name = "name")String param){
         return "Hello " + param;
     }
 
