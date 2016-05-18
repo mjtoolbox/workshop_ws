@@ -19,6 +19,7 @@
 
         <!-- [IMPORTANT] Below dependencies need to be included (comment out <scope> tag) if WAR file needs to be independent.
         Otherwise, assuming blow JARs are in Tomcat/lib directory-->
+        <!-- http://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jaxrs -->
         <dependency>
             <groupId>org.glassfish.ha</groupId>
             <artifactId>ha-api</artifactId>
@@ -78,6 +79,24 @@
             <artifactId>streambuffer</artifactId>
             <version>1.5.3</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- JAX-RS 2.0 RESTful WebService based on RESTEasy -->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+            <version>3.0.16.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-client</artifactId>
+            <version>3.0.16.Final</version>
+        </dependency>
+        <!-- scan annotation -->
+        <dependency>
+            <groupId>net.sf.scannotation</groupId>
+            <artifactId>scannotation</artifactId>
+            <version>1.0.2</version>
         </dependency>
 
     </dependencies>
