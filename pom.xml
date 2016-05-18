@@ -92,12 +92,6 @@
             <artifactId>resteasy-client</artifactId>
             <version>3.0.16.Final</version>
         </dependency>
-        <!-- scan annotation -->
-        <dependency>
-            <groupId>net.sf.scannotation</groupId>
-            <artifactId>scannotation</artifactId>
-            <version>1.0.2</version>
-        </dependency>
 
     </dependencies>
 

@@ -18,7 +18,7 @@ public class RestService {
     @GET
     @Path("/test")
     @Produces("text/plain")
-    public String getUsername() {
+    public String getTestMessage() {
         return "Simple test";
     }
 
