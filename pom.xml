@@ -99,6 +99,8 @@
     <build>
         <!-- final name will overwrite WAR file name-->
         <finalName>workshop_ws</finalName>
+        <!-- if you want to dynamically build WAR based on environment, use below -->
+        <!--<finalName>${build.warname}</finalName>-->
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -159,7 +161,7 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>tomcat7</server>
-                    <path>/workshop_ws</path>
+                    <path>/${build.finalName}</path>
                     <username>admin</username>
                     <password>admin</password>
                 </configuration>
@@ -168,6 +170,32 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>local</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <build.warname>${project.artifactId}-${project.version}-DEV</build.warname>
+                <message.text>This is from local environment.</message.text>
+            </properties>
+        </profile>
+        <profile>
+            <id>ua</id>
+            <properties>
+                <build.warname>${project.artifactId}-${project.version}-UA</build.warname>
+                <message.text>This is from ua environment.</message.text>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <build.warname>${project.artifactId}-${project.version}-PROD</build.warname>
+                <message.text>This is from prod environment.</message.text>
+            </properties>
+        </profile>
+    </profiles>
 
     <repositories>
         <repository>

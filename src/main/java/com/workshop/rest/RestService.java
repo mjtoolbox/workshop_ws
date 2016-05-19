@@ -1,5 +1,7 @@
 package com.workshop.rest;
 
+import com.workshop.utility.Utility;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -19,7 +21,7 @@ public class RestService {
     @Path("/test")
     @Produces("text/plain")
     public String getTestMessage() {
-        return "Simple test";
+        return Utility.loadProperties().getProperty("messageText");
     }
 
 }
